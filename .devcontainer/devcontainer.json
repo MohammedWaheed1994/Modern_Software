@@ -1,0 +1,19 @@
+
+{
+    "name": "Modern Software",
+    "context": "..",
+    "dockerFile": "./Dockerfile",
+    "runArgs": [
+        "--privileged",
+        "-v",
+        "/home/ubuntu/Desktop/Modern_Software:/workspace"
+    ],
+    "settings": {
+        "terminal.integrated.shell.linux": "/bin/bash"
+    },
+    "remoteUser": "mwaheed",
+    "containerUser": "mwaheed",
+    "workspaceFolder": "/workspace",
+    "postStartCommand": "sudo chown -R mwaheed:mwaheed /workspace"
+}
+
