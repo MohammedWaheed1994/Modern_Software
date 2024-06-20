@@ -25,6 +25,7 @@ RUN sudo curl -Lo /usr/local/bin/bazel https://github.com/bazelbuild/bazelisk/re
     && sudo chmod +x /usr/local/bin/bazel  \
     && sudo bazel
 
+RUN conan profile detect
 
 # Switch to the vscode user
 USER mwaheed
