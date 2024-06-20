@@ -11,9 +11,19 @@
     "settings": {
         "terminal.integrated.shell.linux": "/bin/bash"
     },
+    "extensions": [
+        "ms-python.python",
+        "ms-vscode.cpptools-extension-pack",
+        "ms-vscode.cmake-tools",
+        "ms-azuretools.vscode-docker",
+        "robocorp.robotframework-lsp",
+        "TomiTurtiainen.rf-intellisense",
+        "d-biehl.robotcode",
+        "ms-vscode.live-server"
+    ],
     "remoteUser": "mwaheed",
     "containerUser": "mwaheed",
     "workspaceFolder": "/workspace",
-    "postStartCommand": "/workspace/Startup.sh"
+    "postCreateCommand": "/workspace/Startup.sh"
 }
 

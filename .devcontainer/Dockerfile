@@ -19,6 +19,9 @@ RUN sudo apt-get install -y curl
 # Create a Python virtual environment and install Conan
 RUN sudo pip3 install --break-system-packages conan
 
+#install rebot frame work for testing
+RUN sudo pip3 install robotframework --break-system-packages
+
 #install bazel
 # Install Bazelisk
 RUN sudo curl -Lo /usr/local/bin/bazel https://github.com/bazelbuild/bazelisk/releases/download/v1.11.0/bazelisk-linux-arm64 \
