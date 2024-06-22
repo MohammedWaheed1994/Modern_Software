@@ -16,6 +16,9 @@ RUN sudo apt-get install -y cmake
 #install curl
 RUN sudo apt-get install -y curl
 
+#install vim
+RUN sudo apt-get install vim -y
+
 # Create a Python virtual environment and install Conan
 RUN sudo pip3 install --break-system-packages conan
 
