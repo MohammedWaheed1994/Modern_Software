@@ -18,7 +18,7 @@ jobs:
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASS }}
     - name: Build the Docker image
-      run: docker build -t base_image .
+      run: docker build -t base_image .devcontainer/Dockerfile
     - name: run docker container
       run: docker run -it base_image
     - name: run visitor example
