@@ -21,3 +21,5 @@ jobs:
       run: docker build -t base_image .
     - name: run docker container
       run: docker run -it base_image
+    - name: run visitor example
+      run: conan create visitor
