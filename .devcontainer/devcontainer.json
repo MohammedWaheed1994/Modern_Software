@@ -19,7 +19,8 @@
         "robocorp.robotframework-lsp",
         "TomiTurtiainen.rf-intellisense",
         "d-biehl.robotcode",
-        "ms-vscode.live-server"
+        "ms-vscode.live-server",
+        "github.vscode-github-actions"
     ],
     "remoteUser": "mwaheed",
     "containerUser": "mwaheed",
