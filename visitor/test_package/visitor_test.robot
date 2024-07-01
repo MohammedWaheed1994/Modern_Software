@@ -13,5 +13,8 @@ Run visitor and check output
     ${result}=        Wait For Process
     Should Contain    ${result.stdout}       drawing a circle with radius: 5
     Should Contain    ${result.stdout}       Area of the circle is 25
-    Should Contain    ${result.stdout}       drawing a Triangle with width: 4 and length: 6
+    Should Contain    ${result.stdout}       drawing a Triangle with width: 4 and length: 
+    Should Contain    ${result.stdout}       This is BMW
+    Should Contain    ${result.stdout}       This is VW
+    Should Not Contain    ${result.stdout}       This is Porsche
     Should Not Contain    ${result.stdout}       drawing a Rectangle

@@ -5,7 +5,7 @@
 class Shape{
 public:
     virtual ~Shape() = default;
-    virtual void accept(Visitor&) = 0;
+    virtual void accept(ShapeVisitor&) const = 0;
 };
 
 
@@ -20,7 +20,7 @@ public:
         return radius;
     }
 
-    void accept(Visitor & v) override
+    void accept(ShapeVisitor & v) const override
     {
         v.visit(*this);
     }
@@ -47,7 +47,7 @@ public:
         return length;
     }
 
-    void accept(Visitor & v) override
+    void accept(ShapeVisitor & v) const override
     {
         v.visit(*this);
     }

@@ -4,8 +4,12 @@
 class Circle;
 class Rectangle;
 
-class Visitor{
+
+
+class ShapeVisitor{
 public:
-    virtual void visit(Circle&) = 0;
-    virtual void visit(Rectangle&) = 0;
+    virtual void visit(Circle const&) = 0;
+    virtual void visit(Rectangle const&) = 0;
 };
+
+
