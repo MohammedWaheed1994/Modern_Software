@@ -9,10 +9,25 @@ Circle::Circle(short raduis, std::unique_ptr<CircleDrawStrategy> strategy):
     {
     }
 
+Circle::Circle(short raduis, CircleDrawStrategyCallable strategy_callable):
+    m_raduis{raduis},
+    m_strategy_callable{std::move(strategy_callable)}
+    {
+
+    }
+
+
 
 void Circle::draw() const
 {
-    m_strategy->draw(*this);
+    if(m_strategy)
+    {
+        m_strategy->draw(*this);
+    }
+    else
+    {
+        m_strategy_callable(*this);
+    }
 }
 
 
@@ -22,9 +37,23 @@ Square::Square(short length, std::unique_ptr<SquareDrawStrategy> strategy):
     {
     }
 
+Square::Square(short raduis, SquareDrawStrategyCallable strategy_callable):
+    m_length{raduis},
+    m_strategy_callable{std::move(strategy_callable)}
+    {
+
+    }
+
 void Square::draw() const
 {
-    m_strategy->draw(*this);
+    if(m_strategy)
+    {
+        m_strategy->draw(*this);
+    }
+    else
+    {
+        m_strategy_callable(*this);
+    }
 }
 
 Rect::Rect(short length, std::unique_ptr<RectDrawStrategy> strategy):
@@ -33,7 +62,21 @@ Rect::Rect(short length, std::unique_ptr<RectDrawStrategy> strategy):
     {
     }
 
+Rect::Rect(short raduis, RectDrawStrategyCallable strategy_callable):
+    m_length{raduis},
+    m_strategy_callable{std::move(strategy_callable)}
+    {
+
+    }
+
 void Rect::draw() const
 {
-    m_strategy->draw(*this);
+    if(m_strategy)
+    {
+        m_strategy->draw(*this);
+    }
+    else
+    {
+        m_strategy_callable(*this);
+    }
 }
